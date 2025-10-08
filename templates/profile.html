@@ -1,0 +1,365 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Profile - SenQubyr</title>
+    <link href="../css/style2.css" rel="stylesheet">
+    <link href="../images/youtubeKZicon.png" rel="icon" type="image/x-icon" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+<body>
+<header class="header">
+    <a href="index.html" class="logo" id="SenQubyr">
+        <img src="../images/youtubeKZicon.png" alt="Logo">
+        SenQubyr
+    </a>
+    <div class="search">
+        <input type="text" id="search" placeholder="Search">
+        <a href="#" type="button" class="icon-btn" title="Search">
+            <img src="../images/search.png" alt="search">
+        </a>
+    </div>
+    <div class="flex">
+        <a href="#" class="icon-btn" title="Create">
+            <img src="../images/plus-black-symbol_icon-icons.com_73453.png" alt="add">
+        </a>
+        <a href="#" class="icon-btn" title="Notifications">
+            <img src="../images/notification_alarm_bell_icon_146863.png" alt="notification">
+        </a>
+        <a href="profile.html" class="icon-btn" title="Profile">
+            <img src="../images/profile_picture_user_icon_153847.png" alt="profile">
+        </a>
+    </div>
+</header>
+
+<div class="layout container-fluid py-3 py-lg-4">
+    <aside class="sidebar">
+        <div class="section">
+            <a class="nav-item" href="index.html"><span><img src="../images/house.png" alt="home"></span>Home</a>
+            <a class="nav-item" href="trending.html"><span><img src="../images/fire.png" alt="trending"></span>Trending</a>
+            <a class="nav-item" href="shorts.html"><span><img src="../images/shortsicon.png" alt="shorts"></span>Shorts</a>
+            <a class="nav-item" href="subscriptions.html"><span><img src="../images/television.png" alt="subscription"></span>Subscriptions</a>
+        </div>
+        <div class="section">
+            <div style="color:var(--muted);font-size:13px;padding:6px 8px">Library</div>
+            <a class="nav-item" href="history.html">History</a>
+            <a class="nav-item" href="liked.html">Liked</a>
+        </div>
+    </aside>
+
+    <main>
+        <!-- Profile Header -->
+        <section class="profile-header mb-4 mt-lg-3">
+            <div class="profile-card">
+                <div class="profile-avatar">
+                    <img src="../images/Alisher.jpg" alt="Profile Avatar" class="avatar-img">
+                    <button class="edit-avatar-btn" title="Change Avatar">📷</button>
+                </div>
+                <div class="profile-info">
+                    <h2 class="profile-name">Alisher Bolatkhanov</h2>
+                    <p class="profile-username">@alisher_bolatkhanov</p>
+                    <div class="profile-stats">
+                        <div class="stat">
+                            <span class="stat-number">1.2K</span>
+                            <span class="stat-label">Subscribers</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">15</span>
+                            <span class="stat-label">Videos</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2.5M</span>
+                            <span class="stat-label">Views</span>
+                        </div>
+                    </div>
+                    <div class="profile-actions d-flex gap-2 mt-2">
+                        <button class="btn btn-outline-primary btn-sm">Edit Profile</button>
+                        <button class="btn btn-secondary btn-sm">Settings</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Profile Tabs -->
+        <section class="profile-tabs mb-3">
+            <div class="tab-navigation d-flex gap-2 flex-wrap">
+                <button class="tab-btn active btn btn-outline-dark btn-sm" data-tab="subscription">Subscribe to SenQubyr</button>
+                <button class="tab-btn btn btn-outline-dark btn-sm" data-tab="videos">My Videos</button>
+                <button class="tab-btn btn btn-outline-dark btn-sm" data-tab="settings">Account Settings</button>
+            </div>
+        </section>
+
+        <!-- Subscription Tab Content -->
+        <div id="subscription-tab" class="tab-content active">
+            <section class="subscription-section mb-4">
+                <div class="subscription-form-container p-3 p-md-4">
+                    <h3 class="h5 mb-3" style="color: var(--muted);">Subscribe to SenQubyr</h3>
+                    <form id="subscriptionForm" class="subscription-form d-flex flex-column gap-3">
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email Address *</label>
+                            <input type="email" id="email" name="email" required placeholder="Enter your email address" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="name" class="form-label">Full Name *</label>
+                            <input type="text" id="name" name="name" required placeholder="Enter your full name" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="channel" class="form-label">Preferred Content Type</label>
+                            <select id="channel" name="channel" class="form-select">
+                                <option value="">Select content preference</option>
+                                <option value="music">Music</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="tech">Technology</option>
+                                <option value="sports">Sports</option>
+                                <option value="education">Education</option>
+                                <option value="entertainment">Entertainment</option>
+                                <option value="lifestyle">Lifestyle</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">Notification Preferences</label>
+                            <div class="d-flex flex-column gap-2">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notif-new" name="notifications" value="new-videos">
+                                    <label class="form-check-label" for="notif-new">New videos from subscribed channels</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notif-live" name="notifications" value="live-streams">
+                                    <label class="form-check-label" for="notif-live">Live streams</label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" id="notif-trending" name="notifications" value="trending">
+                                    <label class="form-check-label" for="notif-trending">Trending content</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="comments" class="form-label">Additional Comments</label>
+                            <textarea id="comments" name="comments" rows="3" placeholder="Tell us what content you'd like to see more of..." class="form-control"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe Now</button>
+                    </form>
+                    <div id="subscriptionMessage" class="alert mt-3 d-none" role="alert"></div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Videos Tab Content -->
+        <div id="videos-tab" class="tab-content">
+            <section class="my-videos-section">
+                <h3 style="margin:0 0 16px; color: var(--muted);">My Videos</h3>
+                <div class="grid">
+                    <div class="tile">
+                        <div class="thumb-lg" style="background: url('../images/img.png') center/cover no-repeat;"></div>
+                        <div class="tmeta">
+                            <p class="ttitle">How to Create YouTube Clone</p>
+                            <p class="tsub">2.1K views • 3 days ago</p>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="thumb-lg" style="background: url('../images/rec.jpg') center/cover no-repeat;"></div>
+                        <div class="tmeta">
+                            <p class="ttitle">Kazakh Music Tutorial</p>
+                            <p class="tsub">850 views • 1 week ago</p>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="thumb-lg" style="background: linear-gradient(45deg, #ff6b6b, #4ecdc4);"></div>
+                        <div class="tmeta">
+                            <p class="ttitle">Web Development Tips</p>
+                            <p class="tsub">1.5K views • 2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- Settings Tab Content -->
+        <div id="settings-tab" class="tab-content">
+            <section class="settings-section">
+                <h3 style="margin:0 0 16px; color: var(--muted);">Account Settings</h3>
+                <div class="settings-container">
+                    <div class="settings-group">
+                        <h4>Personal Information</h4>
+                        <div class="form-group">
+                            <label for="profile-name">Display Name</label>
+                            <input type="text" id="profile-name" value="Alisher Bolatkhanov">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-email">Email</label>
+                            <input type="email" id="profile-email" value="alisher@gmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label for="profile-bio">Bio</label>
+                            <textarea id="profile-bio" rows="3" placeholder="Tell us about yourself...">Web developer and content creator from Kazakhstan</textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-group">
+                        <h4>Privacy Settings</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked> Make my profile public
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked> Show my subscription list
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox"> Allow others to contact me
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="settings-group">
+                        <h4>Notifications</h4>
+                        <div class="checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked> Email notifications
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox" checked> Push notifications
+                            </label>
+                            <label class="checkbox-label">
+                                <input type="checkbox"> SMS notifications
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <button class="save-settings-btn">Save Settings</button>
+                </div>
+            </section>
+        </div>
+        <div class="container my-5">
+            <h2 class="text-center mb-4">Contact Us</h2>
+
+            <form class="row g-3">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Full Name</label>
+                    <input type="text" class="form-control" id="name" placeholder="Enter your name">
+                </div>
+
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
+
+                <div class="col-12">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" placeholder="Your message..."></textarea>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label">Subscription Type</label>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="basic" checked>
+                        <label class="form-check-label" for="basic">Basic</label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="subscription" id="premium">
+                        <label class="form-check-label" for="premium">Premium</label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="form-check mt-4">
+                        <input class="form-check-input" type="checkbox" id="agree">
+                        <label class="form-check-label" for="agree">
+                            I agree to the terms and conditions
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-12 text-center">
+                    <button type="submit" class="btn btn-primary btn-lg mt-3">Submit</button>
+                </div>
+            </form>
+        </div>
+
+    </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+<script>
+    // Tab functionality
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            const tabId = this.getAttribute('data-tab');
+            
+            // Remove active class from all tabs and content
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            
+            // Add active class to clicked tab and corresponding content
+            this.classList.add('active');
+            document.getElementById(tabId + '-tab').classList.add('active');
+        });
+    });
+
+    // Subscription form handling
+    document.getElementById('subscriptionForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const formData = new FormData(this);
+        const email = formData.get('email');
+        const name = formData.get('name');
+        const channel = formData.get('channel');
+        const notifications = formData.getAll('notifications');
+        const comments = formData.get('comments');
+        
+        // Simple validation
+        if (!email || !name) {
+            showMessage('Please fill in all required fields.', 'error');
+            return;
+        }
+        
+        // Simulate subscription process
+        showMessage('Subscribing...', 'info');
+        
+        setTimeout(() => {
+            showMessage(`Thank you for subscribing, ${name}! We'll send updates to ${email}.`, 'success');
+            this.reset();
+        }, 1500);
+    });
+    
+    function showMessage(text, type) {
+        const messageDiv = document.getElementById('subscriptionMessage');
+        messageDiv.textContent = text;
+        messageDiv.className = `subscription-message ${type}`;
+        messageDiv.style.display = 'block';
+        
+        setTimeout(() => {
+            messageDiv.style.display = 'none';
+        }, 5000);
+    }
+    
+    // Settings save functionality
+    document.querySelector('.save-settings-btn').addEventListener('click', function() {
+        showMessage('Settings saved successfully!', 'success');
+    });
+    
+    // Search functionality
+    document.getElementById('search').addEventListener('keydown', function(e){
+        if(e.key === 'Enter'){
+            alert('Search: ' + this.value);
+        }
+    });
+</script>
+
+</body>
+
+<footer class="footer">
+    <div class="footer-links">
+        <a href="#">About us</a>
+        <a href="#">Rules</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Contacts</a>
+    </div>
+    <div class="footer-copy">
+        © 2025 SenQubyr. Beknur Erdembek, Alisher Bolatkhanov
+    </div>
+</footer>
+
+</html>
+
