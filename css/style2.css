@@ -273,3 +273,28 @@ a {
     padding: 8px;
     border-radius: 10px;
 }
+
+html, body {
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+}
+.footer {
+    margin-top: auto;
+}
+.carousel-item img {
+    height: 300px;
+    width: 50px;
+
+
+}
+.thumb-lg img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+
